@@ -29,7 +29,8 @@ THEN I can save my initials and my score
 ![Alt text](./Assets/images/Quiz_screenshot.PNG)
 ### Links
 
-- GitHub URL - 
+- GitHub URL - https://github.com/amalahema/02_web_api
+
 
 ## My Approach
 
