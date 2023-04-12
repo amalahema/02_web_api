@@ -92,12 +92,12 @@ var questionsArr = [
 
       // Time display onthe main page
       var time = document.createElement("p");
-      //time.setAttribute("banner", "time");
       time.setAttribute("banner", "time");
       time.textContent = "Time: ";
       var second = document.createElement("span");
       second.setAttribute('id', "second");
       time.appendChild(second);
+
       //  High scores on the mainpage
       var viewScore = document.createElement("h");
       viewScore.setAttribute("class", "view-score");
@@ -107,9 +107,9 @@ var questionsArr = [
       container.appendChild(startBtn);
     
 
-    //the timer start when u select the startquiz button
+    //The timer start when u select the startquiz button
     document.querySelector(".btn-start").addEventListener("click", timer);
-    // click to view high scores
+    //Call viewHighScore function when u click the viewHighScore
     document.querySelector(".view-score").addEventListener("click", viewHighScore);
     header.appendChild(time);
   }
@@ -123,7 +123,6 @@ var questionsArr = [
      {  
         //  quiz container using html element
         var quizDiv = document.createElement("div");
-        //quizDiv.classList.add("class","quiz");//name and the value
         quizDiv.setAttribute("class","quiz");//using This class .quiz 
         container.appendChild(quizDiv);
     
@@ -134,7 +133,7 @@ var questionsArr = [
         quizDiv.appendChild(quizTitle);
 
         // create options
-        var optionsObj = questionsArr[index].options;//options array fetched
+        var optionsObj = questionsArr[index].options;//options array 
         for (var x in optionsObj) 
         //x is used to represent each property key in the optionsObj object.Here the x is a and then b
         {
@@ -145,10 +144,10 @@ var questionsArr = [
              {
                 quizOption.setAttribute("check", "correct");
                 //if answer is correct it add new attribute 
-                //name "check" and value correct and later it is checked by has attribute when the even targeted
+                //name is "check" and the value is correct.Later it is checked by has attribute when the even targeted
             }
-        quizOption.textContent = optionsObj[x];//display all the options after the wrong anwer too
-        quizDiv.appendChild(quizOption);//so the attribute check is added to div through the child
+        quizOption.textContent = optionsObj[x];//display all the options 
+        quizDiv.appendChild(quizOption);//so the attribute check is added to div through the children element
         }
         index++;
       
